@@ -5,6 +5,7 @@
     "newline-after-var": 2,
     "newline-before-return": 2,
     "semi": [2, "always"],
-    "import/first": 0
+    "import/first": 0,
+    "space-before-function-paren": [2, "never"]
   }
 }

@@ -5,7 +5,7 @@ export default {
     title: 'React Static Prismic',
   }),
 
-  getRoutes: async () => {
+  getRoutes: async() => {
     const posts = await fetchData();
 
     return [
@@ -33,7 +33,7 @@ export default {
       },
       {
         is404: true,
-        component: 'src/containers/404',
+        component: 'src/containers/NotFound',
       },
     ];
   },
