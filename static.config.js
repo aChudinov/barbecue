@@ -1,4 +1,4 @@
-import fetchData from './src/prismic/fetch'
+import fetchData from './src/prismic/fetch';
 
 export default {
   getSiteData: () => ({
@@ -6,7 +6,7 @@ export default {
   }),
 
   getRoutes: async () => {
-    const posts = await fetchData()
+    const posts = await fetchData();
 
     return [
       {
@@ -35,6 +35,6 @@ export default {
         is404: true,
         component: 'src/containers/404',
       },
-    ]
+    ];
   },
-}
+};

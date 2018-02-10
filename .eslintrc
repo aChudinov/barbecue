@@ -1,4 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb"]
+  "extends": ["react-tools"],
+  "rules": {
+    "newline-after-var": 2,
+    "newline-before-return": 2,
+    "semi": [2, "always"],
+    "import/first": 0
+  }
 }
