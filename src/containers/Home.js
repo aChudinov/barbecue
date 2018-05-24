@@ -1,4 +1,5 @@
-import logoImg from '../logo.png';
+import About from '../widgets/About';
+import Proposition from '../widgets/Proposition';
 import React, { Component } from 'react';
 import { withSiteData } from 'react-static';
 
@@ -6,10 +7,10 @@ import { withSiteData } from 'react-static';
 export default class Home extends Component {
   render() {
     return (
-      <div>
-        <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-        <img src={logoImg} alt="" />
-      </div>
+      <React.Fragment>
+        <Proposition />
+        <About />
+      </React.Fragment>
     );
   }
 }
