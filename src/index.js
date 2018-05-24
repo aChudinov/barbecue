@@ -1,4 +1,4 @@
-import App from './App';
+import App from './App.react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import theme from './lib/theme';

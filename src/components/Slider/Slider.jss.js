@@ -6,7 +6,7 @@ export default ({ colors }) => ({
 
     '.slick-list': {
       width: '100%',
-      overflow: 'hidden',
+      height: '500px',
     },
 
     '.slick-track': {
@@ -22,10 +22,25 @@ export default ({ colors }) => ({
       minHeight: '1px',
     },
 
+    '.slick-arrow': {
+      position: 'absolute',
+      cursor: 'pointer',
+      zIndex: 100,
+      top: '50%',
+    },
+
+    '.slick-prev': {
+      left: '-60px',
+    },
+
+    '.slick-next': {
+      right: '-60px',
+    },
+
     '.slick-dots': {
       position: 'absolute',
-      top: 0,
-      right: 0,
+      top: '100px',
+      right: '105px',
       listStyle: 'none',
       textAlign: 'center',
       padding: 0,
@@ -65,13 +80,63 @@ export default ({ colors }) => ({
     },
 
     '.slick-dots .name0': {
-      bottom: '-56px',
-    },
-    '.slick-dots .name1': {
-      bottom: '-49px',
-    },
-    '.slick-dots .name2': {
       bottom: '-48px',
     },
+    '.slick-dots .name1': {
+      bottom: '-54px',
+    },
+    '.slick-dots .name2': {
+      bottom: '-36px',
+    },
+    '.slick-dots .name3': {
+      bottom: '-37px',
+    },
+    '.slick-dots .name4': {
+      bottom: '-53px',
+    },
+  },
+
+  arrow: {
+    width: '40px',
+    height: '40px',
+    fill: '#826B60',
+  },
+
+  slide: {
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    display: 'flex',
+  },
+
+  picture: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    fontSize: '30px',
+    textAlign: 'right',
+    paddingRight: '25px',
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    height: '500px',
+  },
+
+  text: {
+    paddingTop: '200px',
+  },
+
+  name: {
+    marginBottom: 0,
+    marginTop: 'auto',
+    color: '#826B60',
+  },
+
+  surname: {
+    marginTop: 0,
+  },
+
+  description: {
+    textAlign: 'left',
+    textTransform: 'initial',
+    padding: '0 25px',
+    width: '300px',
   },
 });
