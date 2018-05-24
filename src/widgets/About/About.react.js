@@ -1,20 +1,11 @@
 import injectSheet from 'react-jss';
 import React, { Component } from 'react';
-import Slider from '../components/Slider';
+import Slider from '../../components/Slider';
+import styles from './About.jss';
 import { withSiteData } from 'react-static';
 
 @withSiteData
-@injectSheet({
-  container: {
-    backgroundColor: '#E4DDDB',
-    padding: '4em 0',
-  },
-
-  slider: {
-    margin: 'auto',
-    width: '400px',
-  },
-})
+@injectSheet(styles)
 export default class About extends Component {
   render() {
     const { classes } = this.props;

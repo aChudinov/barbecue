@@ -1,26 +1,11 @@
 import injectSheet from 'react-jss';
-import Menu from '../components/Menu';
+import Menu from '../../components/Menu';
 import React, { Component } from 'react';
+import styles from './Proposition.jss';
 import { withSiteData } from 'react-static';
 
 @withSiteData
-@injectSheet({
-  container: {
-    backgroundColor: '#826B60',
-    minHeight: '100%',
-  },
-
-  heading: {
-    color: '#E4DDDB',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  },
-
-  subheading: {
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  },
-})
+@injectSheet(styles)
 export default class Proposition extends Component {
   render() {
     const { classes } = this.props;

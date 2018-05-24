@@ -6,7 +6,8 @@ export default {
   }),
 
   getRoutes: async() => {
-    const posts = await fetchData();
+    // const posts = await fetchData();
+    const posts = [];
 
     return [
       {
