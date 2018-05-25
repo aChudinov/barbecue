@@ -1,6 +1,6 @@
 export default ({ colors }) => ({
   container: {
-    backgroundColor: '#E4DDDB',
+    backgroundColor: colors.white,
   },
 
   slider: {

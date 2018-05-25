@@ -1,10 +1,6 @@
 export default ({ colors }) => ({
-  nav: {
-    width: '100%',
-  },
-
   link: {
-    color: 'black',
+    color: colors.black,
     padding: '1rem',
     display: 'inline-block',
     textTransform: 'uppercase',
@@ -12,5 +8,12 @@ export default ({ colors }) => ({
 
   content: {
     padding: '1rem',
+  },
+
+  inverseColors: {
+    '& $link': {
+      color: colors.white,
+      fontSize: '12px',
+    },
   },
 });

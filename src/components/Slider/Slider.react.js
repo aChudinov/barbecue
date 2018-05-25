@@ -15,7 +15,7 @@ const MEMBERS = [
   },
   {
     name: 'Roman',
-    surname: 'Zajícek',
+    surname: 'Zajíček',
     title: 'Dobro | vocals',
     description: 'Roman plays the dobro',
   },

@@ -1,3 +1,4 @@
+import Container from '../../components/Container';
 import injectSheet from 'react-jss';
 import Menu from '../../components/Menu';
 import React, { Component } from 'react';
@@ -12,10 +13,12 @@ export default class Proposition extends Component {
 
     return (
       <div className={classes.container}>
-        <Menu />
+        <Container>
+          <Menu />
 
-        <h1 className={classes.heading}>Barbecue</h1>
-        <h1 className={classes.subheading}>Bluegrass band</h1>
+          <h1 className={classes.heading}>Barbecue</h1>
+          <h1 className={classes.subheading}>Bluegrass band</h1>
+        </Container>
       </div>
     );
   }

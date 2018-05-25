@@ -5,7 +5,7 @@ export default ({ colors }) => ({
       fontWeight: 300,
       fontSize: '16px',
       letterSpacing: '0.1em',
-      color: '#241C18',
+      color: colors.black,
       margin: 0,
       padding: 0,
     },

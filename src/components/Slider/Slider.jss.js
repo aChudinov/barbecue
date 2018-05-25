@@ -27,6 +27,7 @@ export default ({ colors }) => ({
       cursor: 'pointer',
       zIndex: 100,
       top: '50%',
+      transform: 'translateY(-50%)',
     },
 
     '.slick-prev': {
@@ -48,7 +49,7 @@ export default ({ colors }) => ({
     },
 
     '.slick-dots li': {
-      color: '#C1AEA5',
+      color: colors.primaryLight,
       textTransform: 'uppercase',
       cursor: 'pointer',
       display: 'inline-block',
@@ -58,7 +59,7 @@ export default ({ colors }) => ({
     },
 
     '.slick-dots li.slick-active': {
-      color: '#826B60',
+      color: colors.primary,
     },
 
     '.slick-dots li span': {
@@ -99,7 +100,12 @@ export default ({ colors }) => ({
   arrow: {
     width: '40px',
     height: '40px',
-    fill: '#826B60',
+    fill: colors.primary,
+    transition: '.3s fill ease-in-out',
+
+    '&:hover': {
+      fill: colors.black,
+    },
   },
 
   slide: {
@@ -126,7 +132,7 @@ export default ({ colors }) => ({
   name: {
     marginBottom: 0,
     marginTop: 'auto',
-    color: '#826B60',
+    color: colors.primary,
   },
 
   surname: {
