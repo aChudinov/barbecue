@@ -1,7 +1,7 @@
 export default ({ colors }) => ({
   container: {
     backgroundColor: colors.primary,
-    minHeight: '100%',
+    height: '100vh',
     boxShadow: 'inset 0 0 50px 0 rgba(0, 0, 0, .2)',
   },
 

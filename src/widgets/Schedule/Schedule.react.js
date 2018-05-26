@@ -4,6 +4,7 @@ import injectSheets from 'react-jss';
 import moment from 'moment';
 import React from 'react';
 import styles from './Schedule.jss';
+import { Element } from 'react-scroll';
 
 const SCHEDULE = [
   {
@@ -74,7 +75,7 @@ export default class Schedule extends React.PureComponent {
     const { classes } = this.props;
 
     return (
-      <div className={classes.container}>
+      <Element name="schedule" className={classes.container}>
         <Container>
           <h1 className={classes.heading}>Schedule</h1>
 
@@ -82,7 +83,7 @@ export default class Schedule extends React.PureComponent {
             {SCHEDULE.map(this.renderRow)}
           </ul>
         </Container>
-      </div>
+      </Element>
     );
   }
 }

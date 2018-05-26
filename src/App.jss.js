@@ -1,5 +1,9 @@
 export default ({ colors }) => ({
   '@global': {
+    html: {
+      minHeight: '100%',
+    },
+
     body: {
       fontFamily: 'Oswald, sans-serif',
       fontWeight: 300,
@@ -10,7 +14,7 @@ export default ({ colors }) => ({
       padding: 0,
     },
 
-    'html, body, #root': {
+    'body, #root': {
       height: '100%',
     },
 
