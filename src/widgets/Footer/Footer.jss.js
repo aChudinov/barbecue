@@ -18,7 +18,6 @@ export default ({ colors }) => ({
 
   dots: {
     stroke: colors.primaryLight,
-    height: '2px',
   },
 
   bottomLine: {

@@ -6,13 +6,16 @@ export default ({ colors }) => ({
   },
 
   heading: {
+    marginTop: '100px',
+    fontSize: '52px',
     color: colors.white,
-    textAlign: 'center',
+    textAlign: 'right',
     textTransform: 'uppercase',
   },
 
   subheading: {
-    textAlign: 'center',
+    fontSize: '52px',
+    textAlign: 'right',
     textTransform: 'uppercase',
   },
 });

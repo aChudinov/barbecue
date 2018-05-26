@@ -1,4 +1,5 @@
 import Container from '../../components/Container';
+import DottedLine from '../../components/DottedLine';
 import injectSheet from 'react-jss';
 import Menu from '../../components/Menu';
 import React from 'react';
@@ -25,9 +26,7 @@ export default class Footer extends React.PureComponent {
           <h1 className={classes.heading}>Contacts</h1>
           <div className={classes.phone}>+420 776-230-804</div>
 
-          <svg viewBox="0 0 3500 20" className={classes.dots}>
-            <line x1="10" x2="3500" y1="10" y2="10" strokeWidth="20" strokeLinecap="round" strokeDasharray="1, 80" />
-          </svg>
+          <DottedLine className={classes.dots} />
 
           <section className={classes.socials}>
             {SOCIALS.map(({ id, Icon, url }) => (
