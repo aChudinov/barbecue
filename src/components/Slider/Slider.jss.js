@@ -133,10 +133,12 @@ export default ({ colors }) => ({
     marginBottom: 0,
     marginTop: 'auto',
     color: colors.primary,
+    textShadow: '1px 1px 1px rgba(0, 0, 0, 0.4)',
   },
 
   surname: {
     marginTop: 0,
+    textShadow: '1px 1px 1px rgba(255, 255, 255, 0.2)',
   },
 
   description: {
