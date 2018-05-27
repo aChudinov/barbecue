@@ -41,7 +41,7 @@ export default ({ colors }) => ({
     '.slick-dots': {
       position: 'absolute',
       top: '100px',
-      right: '105px',
+      right: '114px',
       listStyle: 'none',
       textAlign: 'center',
       padding: 0,
@@ -54,7 +54,7 @@ export default ({ colors }) => ({
       cursor: 'pointer',
       display: 'inline-block',
       position: 'relative',
-      width: '1.5em',
+      width: '22px',
       userSelect: 'none',
     },
 
@@ -63,7 +63,7 @@ export default ({ colors }) => ({
     },
 
     '.slick-dots li span': {
-      fontSize: '1.4em',
+      fontSize: '20px',
       position: 'relative',
       left: '-3px',
     },

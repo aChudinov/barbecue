@@ -4,7 +4,7 @@ export default {
     white: '#E4DDDB',
     primary: '#826B60',
     primaryDark: '#70564A',
-    primaryLight: '#C1AEA5',
+    primaryLight: 'rgba(130, 107, 96, .3)',
   },
 
   sizes: {
