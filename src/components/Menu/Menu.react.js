@@ -12,7 +12,7 @@ const MENU_ITEMS = [
   { id: 'about', title: 'About' },
   { id: 'schedule', title: 'Schedule' },
   { id: 'media', title: 'Media' },
-  { id: 'shop', title: 'Shop' },
+  { id: 'store', title: 'Store' },
   { id: 'contacts', title: 'Contacts' },
 ];
 
