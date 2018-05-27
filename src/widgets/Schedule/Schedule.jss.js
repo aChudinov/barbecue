@@ -1,8 +1,7 @@
 export default ({ colors }) => ({
   container: {
-    backgroundColor: 'white',
-    paddingTop: '50px',
-    paddingBottom: '50px',
+    backgroundColor: colors.white,
+    padding: '50px 0',
   },
 
   heading: {

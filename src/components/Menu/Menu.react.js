@@ -8,8 +8,11 @@ import { Sticky } from 'react-sticky';
 
 const MENU_ITEMS = [
   { id: 'home', title: 'Home' },
+  { id: 'members', title: 'Members' },
   { id: 'about', title: 'About' },
   { id: 'schedule', title: 'Schedule' },
+  { id: 'media', title: 'Media' },
+  { id: 'shop', title: 'Shop' },
   { id: 'contacts', title: 'Contacts' },
 ];
 
@@ -21,7 +24,7 @@ export default class Menu extends Component {
     return (
       MENU_ITEMS.map(({ id, title }, index) => (
         <React.Fragment>
-          <Link className={classes.link} key={id} to={id} smooth>{title}</Link>
+          <Link className={classes.link} key={id} to={id} smooth offset={-54}>{title}</Link>
 
           {!inverseColors && index < MENU_ITEMS.length - 1 &&
             <span className={classes.dot}>●</span>

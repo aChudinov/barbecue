@@ -1,6 +1,6 @@
 export default ({ colors }) => ({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     padding: '50px 0',
   },
 
