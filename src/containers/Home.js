@@ -13,7 +13,7 @@ import { withSiteData } from 'react-static';
 export default class Home extends Component {
   render() {
     return (
-      <StickyContainer style={{ height: '100%' }}>
+      <StickyContainer style={{ overflow: 'hidden', height: '100%' }}>
         <Proposition />
         <Members />
         <About />

@@ -39,7 +39,8 @@ export default class Menu extends Component {
     const className = classnames(
       classes.nav,
       inverseColors && classes.inverseColors,
-      isSticky && classes.sticky,
+      isSticky && classes.isSticky,
+      sticky && classes.sticky,
     );
 
     const menuItems = sticky

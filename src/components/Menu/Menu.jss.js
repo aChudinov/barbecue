@@ -32,7 +32,13 @@ export default ({ colors }) => ({
   },
 
   sticky: {
+    backgroundColor: 'rgba(255, 255, 255, .2)',
+    boxShadow: '0 0 15px 15px rgba(255, 255, 255, .2)',
+  },
+
+  isSticky: {
     backgroundColor: 'rgba(0, 0, 0, .9)',
+    boxShadow: 'none',
 
     '& $link': {
       color: colors.white,
