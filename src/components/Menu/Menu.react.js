@@ -43,13 +43,20 @@ export default class Menu extends Component {
       sticky && classes.sticky,
     );
 
-    const menuItems = sticky
-      ? <Container>{this.renderMenuItems()}</Container>
-      : this.renderMenuItems();
+    if (sticky) {
+      return (
+        <nav style={style} className={className}>
+          <Container className={classes.container}>
+            <div>{this.renderMenuItems()}</div>
+            <div className={classes.logo} />
+          </Container>
+        </nav>
+      );
+    }
 
     return (
       <nav style={style} className={className}>
-        {menuItems}
+        {this.renderMenuItems()}
       </nav>
     );
   }

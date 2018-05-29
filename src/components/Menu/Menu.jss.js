@@ -1,7 +1,23 @@
 export default ({ colors }) => ({
   nav: {
     zIndex: 1000,
-    transition: '.3s background-color ease-in-out',
+    transition: '.3s all ease-in-out',
+  },
+
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  logo: {
+    width: '110px',
+    height: '70px',
+    backgroundImage: 'url(/images/logo.png)',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'left center',
+    transition: '.3s all ease-in-out',
   },
 
   link: {
@@ -12,7 +28,11 @@ export default ({ colors }) => ({
     fontWeight: 700,
     userSelect: 'none',
     cursor: 'pointer',
-    transition: '.3s color ease-in-out',
+    transition: '.3s all ease-in-out',
+
+    '&:first-of-type': {
+      paddingLeft: '0 !important',
+    },
 
     '&:hover': {
       color: 'black',
@@ -32,8 +52,7 @@ export default ({ colors }) => ({
   },
 
   sticky: {
-    backgroundColor: 'rgba(255, 255, 255, .2)',
-    boxShadow: '0 0 15px 15px rgba(255, 255, 255, .2)',
+    backgroundColor: 'rgba(255, 255, 255, .8)',
   },
 
   isSticky: {
@@ -47,6 +66,12 @@ export default ({ colors }) => ({
       '&:hover': {
         color: 'white',
       },
+    },
+
+    '& $logo': {
+      backgroundImage: 'url(/images/logo_inversed.png)',
+      width: '72px',
+      height: '46px',
     },
   },
 

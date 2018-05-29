@@ -1,14 +1,15 @@
-import React from 'react';
+import classnames from 'classnames';
 import injectSheet from 'react-jss';
+import React from 'react';
 import styles from './Container.jss';
 
 @injectSheet(styles)
 export default class Container extends React.PureComponent {
   render() {
-    const { children, classes } = this.props;
+    const { children, className, classes } = this.props;
 
     return (
-      <div className={classes.container}>{children}</div>
+      <div className={classnames(classes.container, className)}>{children}</div>
     );
   }
 }

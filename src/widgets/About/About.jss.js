@@ -2,16 +2,23 @@ export default {
   container: {
     backgroundColor: 'white',
     padding: '50px 0',
-    textAlign: 'center',
+  },
+
+  content: {
+    display: 'flex',
 
     '& p': {
-      maxWidth: '800px',
+      flex: 1,
       marginLeft: 'auto',
       marginRight: 'auto',
     },
   },
 
-  heading: {
-    textTransform: 'uppercase',
+  logo: {
+    width: '25%',
+    backgroundImage: 'url(/images/logo.png)',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'left center',
   },
 };
