@@ -23,8 +23,8 @@ export default class Menu extends Component {
 
     return (
       MENU_ITEMS.map(({ id, title }, index) => (
-        <React.Fragment>
-          <Link className={classes.link} key={id} to={id} smooth offset={-54}>{title}</Link>
+        <React.Fragment key={id}>
+          <Link className={classes.link} to={id} smooth offset={-54}>{title}</Link>
 
           {!inverseColors && index < MENU_ITEMS.length - 1 &&
             <span className={classes.dot}>●</span>

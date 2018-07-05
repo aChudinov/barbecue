@@ -7,5 +7,16 @@ export default ({ colors }) => ({
   heading: {
     textTransform: 'uppercase',
     textAlign: 'center',
+    marginBottom: '50px',
+  },
+
+  flex: {
+    display: 'flex',
+    margin: '0 -30px',
+  },
+
+  video: {
+    flex: 1,
+    padding: '0 30px',
   },
 });

@@ -17,7 +17,7 @@ export default ({ colors }) => ({
   },
 
   dots: {
-    stroke: colors.primaryLight,
+    stroke: colors.white,
   },
 
   bottomLine: {

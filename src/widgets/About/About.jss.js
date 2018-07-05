@@ -8,6 +8,8 @@ export default {
     display: 'flex',
 
     '& p': {
+      fontFamily: 'Lora, sans-serif',
+      fontStyle: 'italic',
       flex: 1,
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -15,7 +17,7 @@ export default {
   },
 
   logo: {
-    width: '25%',
+    width: '20%',
     backgroundImage: 'url(/images/logo.png)',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
