@@ -11,10 +11,10 @@ import NextIcon from '../../images/player_next.svg';
 import PrevIcon from '../../images/player_previous.svg';
 
 const SONGS = [
-  { title: 'Gigolo', author: 'Pavel Handlík', url: '/mp3/gigolo.mp3' },
-  { title: 'Steel Rails', author: 'Louise Branscomb', url: '/mp3/steel_rails.mp3' },
-  { title: 'Blue Moon of Kentucky', author: 'Bill Monroe', url: '/mp3/blue_moon.mp3' },
-  { title: 'Steel Rails', author: 'Louise Branscomb', url: '/mp3/steel_rails.mp3' },
+  { title: 'Gigolo', author: 'Pavel Handlík', url: './mp3/gigolo.mp3' },
+  { title: 'Steel Rails', author: 'Louise Branscomb', url: './mp3/steel_rails.mp3' },
+  { title: 'Blue Moon of Kentucky', author: 'Bill Monroe', url: './mp3/blue_moon.mp3' },
+  { title: 'Steel Rails', author: 'Louise Branscomb', url: './mp3/steel_rails.mp3' },
 ];
 
 @injectSheets(styles)

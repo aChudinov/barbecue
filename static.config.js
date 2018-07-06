@@ -12,12 +12,12 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/containers/Home',
+        component: 'src/containers/Home/index',
         getData: () => ({ posts }),
       },
       {
         is404: true,
-        component: 'src/containers/NotFound',
+        component: 'src/containers/NotFound/index',
       },
     ];
   },

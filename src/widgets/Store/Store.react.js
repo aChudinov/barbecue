@@ -13,6 +13,8 @@ export default class About extends React.Component {
       <Element name="store" className={classes.container}>
         <Container>
           <h1 className={classes.heading}>Store</h1>
+
+
         </Container>
       </Element>
     );
