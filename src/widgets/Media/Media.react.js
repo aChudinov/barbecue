@@ -22,7 +22,7 @@ export default class About extends React.Component {
               allow="autoplay; encrypted-media"
               className={classes.video}
               width="560"
-              height="315"
+              height="312"
               allowFullScreen
               frameBorder="0"
             />

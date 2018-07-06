@@ -2,6 +2,9 @@ export default ({ colors }) => ({
   container: {
     flex: 1,
     padding: '0 30px',
+    height: '312px',
+    display: 'flex',
+    flexDirection: 'column',
   },
 
   title: {
@@ -20,6 +23,7 @@ export default ({ colors }) => ({
 
   buttons: {
     textAlign: 'center',
+    marginBottom: '10px',
   },
 
   button: {
@@ -39,7 +43,7 @@ export default ({ colors }) => ({
   listWrapper: {
     display: 'flex',
     alignItems: 'flex-start',
-    marginTop: '30px',
+    marginTop: 'auto',
   },
 
   album: {
@@ -63,11 +67,7 @@ export default ({ colors }) => ({
     color: colors.primary,
     cursor: 'pointer',
     transition: 'color .2s ease-in-out',
-    marginBottom: '8px',
-  },
-
-  item__active: {
-    color: colors.black,
+    marginBottom: '2px',
   },
 
   itemIcon: {

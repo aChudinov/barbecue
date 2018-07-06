@@ -12,6 +12,7 @@ import PrevIcon from '../../images/player_previous.svg';
 
 const SONGS = [
   { title: 'Gigolo', author: 'Pavel Handlík', url: '/mp3/gigolo.mp3' },
+  { title: 'Steel Rails', author: 'Louise Branscomb', url: '/mp3/steel_rails.mp3' },
   { title: 'Blue Moon of Kentucky', author: 'Bill Monroe', url: '/mp3/blue_moon.mp3' },
   { title: 'Steel Rails', author: 'Louise Branscomb', url: '/mp3/steel_rails.mp3' },
 ];
@@ -76,6 +77,7 @@ export default class MediaPlayer extends React.PureComponent {
           playing={playing}
           url={url}
           onProgress={state => this.setState(state)}
+          onEnded={this.playNext}
         />
       </React.Fragment>
     );
@@ -89,7 +91,7 @@ export default class MediaPlayer extends React.PureComponent {
     return (
       <li
         key={title}
-        className={classnames(classes.item, isActive && classes.item__active)}
+        className={classes.item}
         onClick={() => this.load(index)}
       >
         <PlayIcon className={classnames(classes.itemIcon, isActive && classes.itemIcon__active)} />

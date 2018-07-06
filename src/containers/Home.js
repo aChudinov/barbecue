@@ -1,5 +1,6 @@
 import About from '../widgets/About';
 import Footer from '../widgets/Footer';
+import Gallery from '../components/Gallery';
 import Media from '../widgets/Media';
 import Members from '../widgets/Members';
 import Proposition from '../widgets/Proposition';
@@ -20,6 +21,7 @@ export default class Home extends Component {
         <Schedule />
         <Media />
         <Store />
+        <Gallery />
         <Footer />
       </StickyContainer>
     );
