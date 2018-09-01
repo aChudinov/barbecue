@@ -32,8 +32,8 @@ const MEMBERS = [
     description: 'Eda plays his mandolin very well',
   },
   {
-    name: 'Alexej',
-    surname: 'Čudinov',
+    name: 'Alexey',
+    surname: 'Chudinov',
     title: 'Banjo | vocals',
     description: 'Alexey plays a banjo and tries to sing',
   },

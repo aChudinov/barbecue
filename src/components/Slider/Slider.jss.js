@@ -93,7 +93,7 @@ export default ({ colors }) => ({
       bottom: '-37px',
     },
     '.slick-dots .name4': {
-      bottom: '-53px',
+      bottom: '-56px',
     },
   },
 

@@ -8,7 +8,7 @@ import Members from '../../widgets/Members';
 import Proposition from '../../widgets/Proposition';
 import React, { Component } from 'react';
 import Schedule from '../../widgets/Schedule';
-import Store from '../../widgets/Store';
+// import Store from '../../widgets/Store';
 import { StickyContainer } from 'react-sticky';
 import { withSiteData } from 'react-static';
 
@@ -23,7 +23,7 @@ export default class Home extends Component {
         <About />
         <Schedule />
         <Media />
-        <Store />
+        {/* <Store /> */}
         <Gallery />
         <Footer />
       </StickyContainer>

@@ -1,6 +1,7 @@
 import Lightbox from 'react-images';
 import PhotoGallery from 'react-photo-gallery';
 import React from 'react';
+import { Element } from 'react-scroll';
 
 const PHOTOS = [
   { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 4, height: 3 },
@@ -40,7 +41,7 @@ export default class Gallery extends React.PureComponent {
     const { currentImage, lightboxIsOpen } = this.state;
 
     return (
-      <React.Fragment>
+      <Element name="gallery">
         <PhotoGallery
           onClick={this.openLightbox}
           photos={PHOTOS}
@@ -55,7 +56,7 @@ export default class Gallery extends React.PureComponent {
           isOpen={lightboxIsOpen}
           currentImage={currentImage}
         />
-      </React.Fragment>
+      </Element>
     );
   }
 }

@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import Slider from '../../components/Slider';
 import styles from './Members.jss';
 import { Element } from 'react-scroll';
-import { withSiteData } from 'react-static';
 
-@withSiteData
 @injectSheet(styles)
 export default class About extends Component {
   render() {

@@ -88,8 +88,6 @@ export default ({ colors }) => ({
   },
 
   itemAuthor: {
-    fontFamily: 'Lora, sans-serif',
-    fontStyle: 'italic',
     color: colors.white,
   },
 });

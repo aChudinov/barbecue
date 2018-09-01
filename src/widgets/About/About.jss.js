@@ -8,8 +8,6 @@ export default {
     display: 'flex',
 
     '& p': {
-      fontFamily: 'Lora, sans-serif',
-      fontStyle: 'italic',
       flex: 1,
       marginLeft: 'auto',
       marginRight: 'auto',
