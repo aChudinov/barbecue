@@ -41,7 +41,7 @@ export default class Footer extends React.PureComponent {
             <section className={classes.bottomLine}>
               <div className={classes.copyright}>Copyright 2018 © BarbecueBand.cz</div>
 
-              <Menu inverseColors />
+              <Menu className={classes.menu} inverseColors />
             </section>
           </Container>
         </footer>

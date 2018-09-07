@@ -36,12 +36,13 @@ export default class Menu extends Component {
   }
 
   renderMenu(style, isSticky) {
-    const { classes, inverseColors, sticky } = this.props;
+    const { classes, className: classNameProp, inverseColors, sticky } = this.props;
     const className = classnames(
       classes.nav,
       inverseColors && classes.inverseColors,
       isSticky && classes.isSticky,
       sticky && classes.sticky,
+      classNameProp,
     );
 
     if (sticky) {
@@ -61,6 +62,7 @@ export default class Menu extends Component {
       </nav>
     );
   }
+
   render() {
     const { sticky } = this.props;
 

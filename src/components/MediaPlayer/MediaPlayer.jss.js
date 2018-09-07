@@ -1,16 +1,24 @@
-export default ({ colors }) => ({
+export default ({ colors, mediaQueries, sizes }) => ({
   container: {
     flex: 1,
     padding: '0 30px',
     height: '312px',
     display: 'flex',
     flexDirection: 'column',
+
+    [mediaQueries.tablet]: {
+      marginTop: '50px',
+    },
   },
 
   title: {
     fontSize: '24px',
     marginTop: 0,
     marginBottom: '10px',
+
+    [mediaQueries.tablet]: {
+      display: 'none',
+    },
   },
 
   player: {
@@ -53,6 +61,16 @@ export default ({ colors }) => ({
     backgroundImage: 'url(/images/album.png)',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+
+    [mediaQueries.phone]: {
+      padding: `0 ${sizes.gutter}`,
+      margin: 0,
+    },
+
+    [mediaQueries.small]: {
+      display: 'none',
+    },
   },
 
   list: {

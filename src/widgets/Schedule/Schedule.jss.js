@@ -1,4 +1,4 @@
-export default ({ colors }) => ({
+export default ({ colors, mediaQueries }) => ({
   container: {
     backgroundColor: colors.white,
     padding: '50px 0',
@@ -20,6 +20,10 @@ export default ({ colors }) => ({
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
+
+    [mediaQueries.phone]: {
+      justifyContent: 'space-around',
+    },
   },
 
   dots: {
@@ -58,10 +62,25 @@ export default ({ colors }) => ({
     borderRight: `4px solid ${colors.primaryLight}`,
     paddingRight: '15px',
     marginRight: '15px',
+
+    [mediaQueries.phone]: {
+      textAlign: 'center',
+    },
   },
 
   description: {
+    [mediaQueries.phone]: {
+      display: 'none',
+    },
+  },
 
+  description_mobile: {
+    marginTop: '10px',
+    display: 'none',
+
+    [mediaQueries.phone]: {
+      display: 'block',
+    },
   },
 
   link: {
@@ -77,6 +96,10 @@ export default ({ colors }) => ({
 
     '&:hover': {
       backgroundColor: colors.black,
+    },
+
+    [mediaQueries.phone]: {
+      marginLeft: 0,
     },
   },
 });

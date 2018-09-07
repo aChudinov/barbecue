@@ -1,4 +1,4 @@
-export default ({ colors }) => ({
+export default ({ colors, mediaQueries }) => ({
   footer: {
     backgroundColor: colors.primary,
     boxShadow: 'inset 0 0 50px 0 rgba(0, 0, 0, .2)',
@@ -14,10 +14,18 @@ export default ({ colors }) => ({
     color: colors.white,
     fontSize: '36px',
     fontWeight: 700,
+
+    [mediaQueries.phone]: {
+      fontSize: '24px',
+    },
   },
 
   dots: {
     stroke: colors.white,
+
+    [mediaQueries.phone]: {
+      display: 'none',
+    },
   },
 
   bottomLine: {
@@ -27,10 +35,22 @@ export default ({ colors }) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     color: colors.white,
+
+    [mediaQueries.tablet]: {
+      flexDirection: 'column',
+    },
+
+    [mediaQueries.phone]: {
+      marginTop: '50px',
+    },
   },
 
   copyright: {
     fontSize: '12px',
+
+    [mediaQueries.phone]: {
+      marginBottom: '35px',
+    },
   },
 
   socials: {
@@ -53,6 +73,12 @@ export default ({ colors }) => ({
 
     '&:hover': {
       fill: 'black',
+    },
+  },
+
+  menu: {
+    [mediaQueries.phone]: {
+      display: 'none',
     },
   },
 });

@@ -64,6 +64,8 @@ export default class Schedule extends React.PureComponent {
           <a href={link} target="_blank" className={classes.link}>Info</a>
         </li>
 
+        <div className={classes.description_mobile}>{title} {'//'} {place}</div>
+
         {index < SCHEDULE.length - 1 &&
           <DottedLine className={classes.dots} size={7000} />
         }

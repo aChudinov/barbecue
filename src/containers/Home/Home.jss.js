@@ -6,7 +6,7 @@ export default ({ colors }) => ({
 
     body: {
       fontFamily: 'Oswald, sans-serif',
-      fontWeight: 300,
+      fontWeight: 200,
       fontSize: '16px',
       letterSpacing: '0.1em',
       color: colors.black,
