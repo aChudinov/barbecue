@@ -7,7 +7,8 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy": "yarn build && node deploy"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -34,6 +35,7 @@
     "babel-eslint": "^8.2.1",
     "babel-plugin-inline-react-svg": "^0.5.2",
     "eslint": "^4.17.0",
+    "ftp-deploy": "^2.1.2",
     "serve": "^6.1.0"
   }
 }
