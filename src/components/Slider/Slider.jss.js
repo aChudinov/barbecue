@@ -1,4 +1,4 @@
-export default ({ colors }) => ({
+export default ({ colors, mediaQueries }) => ({
   '@global': {
     '.slick-slider': {
       position: 'relative',
@@ -7,6 +7,10 @@ export default ({ colors }) => ({
     '.slick-list': {
       width: '100%',
       height: '500px',
+
+      '@media screen and (max-width: 550px)': {
+        height: '400px',
+      },
     },
 
     '.slick-track': {
@@ -46,6 +50,11 @@ export default ({ colors }) => ({
       textAlign: 'center',
       padding: 0,
       margin: 0,
+
+      '@media screen and (max-width: 550px)': {
+        right: '50%',
+        transform: 'translateX(50%)',
+      },
     },
 
     '.slick-dots li': {
@@ -106,6 +115,10 @@ export default ({ colors }) => ({
     '&:hover': {
       fill: colors.black,
     },
+
+    [mediaQueries.tablet]: {
+      display: 'none',
+    },
   },
 
   slide: {
@@ -123,10 +136,18 @@ export default ({ colors }) => ({
     paddingRight: '25px',
     backgroundColor: 'rgba(0, 0, 0, .2)',
     height: '500px',
+
+    '@media screen and (max-width: 550px)': {
+      display: 'none',
+    },
   },
 
   text: {
     paddingTop: '200px',
+
+    '@media screen and (max-width: 550px)': {
+      width: '100%',
+    },
   },
 
   name: {
@@ -146,5 +167,9 @@ export default ({ colors }) => ({
     textTransform: 'initial',
     padding: '0 25px',
     width: '300px',
+
+    '@media screen and (max-width: 550px)': {
+      width: 'calc(100% - 50px)',
+    },
   },
 });

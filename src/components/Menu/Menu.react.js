@@ -49,7 +49,7 @@ export default class Menu extends Component {
       return (
         <nav style={style} className={className}>
           <Container className={classes.container}>
-            <div>{this.renderMenuItems()}</div>
+            <div className={classes.items}>{this.renderMenuItems()}</div>
             <div className={classes.logo} />
           </Container>
         </nav>

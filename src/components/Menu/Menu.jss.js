@@ -1,4 +1,4 @@
-export default ({ colors }) => ({
+export default ({ colors, mediaQueries }) => ({
   nav: {
     zIndex: 1000,
     transition: '.3s all ease-in-out',
@@ -8,6 +8,17 @@ export default ({ colors }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+
+    [mediaQueries.tablet]: {
+      justifyContent: 'center',
+      padding: '5px 0',
+    },
+  },
+
+  items: {
+    [mediaQueries.tablet]: {
+      display: 'none',
+    },
   },
 
   logo: {
