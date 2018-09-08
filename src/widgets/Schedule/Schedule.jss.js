@@ -33,6 +33,7 @@ export default ({ colors, mediaQueries }) => ({
 
   date: {
     borderRight: `4px solid ${colors.primaryLight}`,
+    minWidth: '68px',
     paddingRight: '15px',
     marginRight: '15px',
     display: 'flex',

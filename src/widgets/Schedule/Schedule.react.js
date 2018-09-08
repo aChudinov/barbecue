@@ -5,42 +5,13 @@ import moment from 'moment';
 import React from 'react';
 import styles from './Schedule.jss';
 import { Element } from 'react-scroll';
+import { withRouteData } from 'react-static';
 
-const SCHEDULE = [
-  {
-    id: 1,
-    date: '12-12-2018 20:00',
-    title: 'Saloon v Modrem',
-    place: 'Mlada Boleslav, Czech Republic',
-    link: 'https://google.com',
-  },
-  {
-    id: 2,
-    date: '12-12-2018 20:00',
-    title: 'Saloon v Modrem',
-    place: 'Mlada Boleslav, Czech Republic',
-    link: 'https://google.com',
-  },
-  {
-    id: 3,
-    date: '12-12-2018 20:00',
-    title: 'Saloon v Modrem',
-    place: 'Mlada Boleslav, Czech Republic',
-    link: 'https://google.com',
-  },
-  {
-    id: 4,
-    date: '12-12-2018 20:00',
-    title: 'Saloon v Modrem',
-    place: 'Mlada Boleslav, Czech Republic',
-    link: 'https://google.com',
-  },
-];
-
+@withRouteData
 @injectSheets(styles)
 export default class Schedule extends React.PureComponent {
   renderRow = (item, index) => {
-    const { classes } = this.props;
+    const { concerts, classes } = this.props;
     const { id, link, place, title } = item;
 
     const date = moment(item.date);
@@ -66,7 +37,7 @@ export default class Schedule extends React.PureComponent {
 
         <div className={classes.description_mobile}>{title} {'//'} {place}</div>
 
-        {index < SCHEDULE.length - 1 &&
+        {index < concerts.length - 1 &&
           <DottedLine className={classes.dots} size={7000} />
         }
       </React.Fragment>
@@ -75,6 +46,9 @@ export default class Schedule extends React.PureComponent {
 
   render() {
     const { classes } = this.props;
+    const concerts = this.props.concerts
+      .sort((a, b) => moment(a.date).isAfter(moment(b.date)))
+      .filter(item => moment(item.date).isAfter(moment()));
 
     return (
       <Element name="schedule" className={classes.container}>
@@ -82,7 +56,7 @@ export default class Schedule extends React.PureComponent {
           <h1 className={classes.heading}>Schedule</h1>
 
           <ul className={classes.list}>
-            {SCHEDULE.map(this.renderRow)}
+            {concerts.map(this.renderRow)}
           </ul>
         </Container>
       </Element>

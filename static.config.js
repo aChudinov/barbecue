@@ -1,19 +1,14 @@
 import fetchData from './src/prismic/fetch';
 
 export default {
-  getSiteData: () => ({
-    title: 'Barbecue bluegrass band',
-  }),
-
   getRoutes: async() => {
-    // const posts = await fetchData();
-    const posts = [];
+    const concerts = await fetchData();
 
     return [
       {
         path: '/',
         component: 'src/containers/Home/index',
-        getData: () => ({ posts }),
+        getData: () => ({ concerts }),
       },
       {
         is404: true,

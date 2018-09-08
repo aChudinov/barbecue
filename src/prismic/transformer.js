@@ -9,12 +9,12 @@ export default function transform(prismicData) {
 
     switch (name) {
       case 'title':
-      case 'body':
-        // The data we want is always on the first child and in the text property
-        // Note that in reality the response could be multiple paragraphs,
-        // with embedded links, images etc
-        // you would need to handle that here
+      case 'place':
         result[name] = value[0].text;
+        break;
+
+      case 'link':
+        result[name] = value.url;
         break;
 
       default:
@@ -24,53 +24,3 @@ export default function transform(prismicData) {
 
   return result;
 }
-
-/* SAMPLE RESPONSE FOR A 'POST'
-  {
-     {
-        id: "WmAZTCkAACarLekM"
-        uid: "1"
-        type: "post"
-        href: https://react-static-blog.prismic.io/
-        tags: [ ]
-        first_publication_date: "2018-01-18T03:52:45+0000"
-        last_publication_date: "2018-01-18T03:52:45+0000"
-        + … -slugs: []
-        linked_documents: [ ]
-        lang: "en-us"
-        alternate_languages: [ ]
-        --data: {
-          --post: {
-          -id: {
-            type: "Number"
-            value: 1
-          }
-        --userid: {
-          type: "Number"
-          value: 1
-        }
-      --title: {
-        type: "StructuredText"
-      --value: [
-        --{
-          type: "heading1"
-          text: "Mark Twain"
-          spans: [ ]
-        }
-        ]
-      }
-      --body: {
-        type: "StructuredText"
-        --value: [
-        --{
-          type: "paragraph"
-          text: "Twenty years from now you will be more disappointed..."
-          + … -spans: []
-      }
-    ]
-  }
-}
-}
-}
--
-*/
