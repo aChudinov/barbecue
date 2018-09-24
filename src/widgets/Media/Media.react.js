@@ -6,7 +6,7 @@ import styles from './Media.jss';
 import { Element } from 'react-scroll';
 
 @injectSheet(styles)
-export default class About extends React.Component {
+export default class Media extends React.Component {
   render() {
     const { classes } = this.props;
 

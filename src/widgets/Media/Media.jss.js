@@ -2,6 +2,10 @@ export default ({ mediaQueries }) => ({
   container: {
     backgroundColor: 'white',
     padding: '50px 0',
+
+    [mediaQueries.small]: {
+      paddingBottom: '70px',
+    },
   },
 
   heading: {

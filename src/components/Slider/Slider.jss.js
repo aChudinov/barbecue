@@ -18,6 +18,10 @@ export default ({ colors, mediaQueries }) => ({
       left: 0,
       top: 0,
       display: 'block',
+
+      '@media screen and (max-width: 550px)': {
+        height: '100%',
+      },
     },
 
     '.slick-slide': {
@@ -52,8 +56,7 @@ export default ({ colors, mediaQueries }) => ({
       margin: 0,
 
       '@media screen and (max-width: 550px)': {
-        right: '50%',
-        transform: 'translateX(50%)',
+        right: '0',
       },
     },
 
@@ -135,10 +138,21 @@ export default ({ colors, mediaQueries }) => ({
     textAlign: 'right',
     paddingRight: '25px',
     backgroundColor: 'rgba(0, 0, 0, .2)',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center 100%',
     height: '500px',
 
     '@media screen and (max-width: 550px)': {
-      display: 'none',
+      position: 'absolute',
+      bottom: 0,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      height: '100%',
+      width: '100%',
+      opacity: 0.4,
+      backgroundColor: 'transparent',
+      backgroundPosition: '0 100%',
     },
   },
 
@@ -154,12 +168,20 @@ export default ({ colors, mediaQueries }) => ({
     marginBottom: 0,
     marginTop: 'auto',
     color: colors.primary,
-    textShadow: '1px 1px 1px rgba(0, 0, 0, 0.4)',
+    textShadow: '1px 1px 4px rgba(0, 0, 0, 0.9)',
+
+    '@media screen and (max-width: 550px)': {
+      display: 'none',
+    },
   },
 
   surname: {
     marginTop: 0,
-    textShadow: '1px 1px 1px rgba(255, 255, 255, 0.2)',
+    textShadow: '1px 1px 4px rgba(255, 255, 255, 0.9)',
+
+    '@media screen and (max-width: 550px)': {
+      display: 'none',
+    },
   },
 
   description: {

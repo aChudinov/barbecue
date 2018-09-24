@@ -12,30 +12,35 @@ const MEMBERS = [
     surname: 'Handlík',
     title: 'Guitar | vocals',
     description: 'Pavel is a band lead Pavel is a band lead Pavel is a band lead Pavel is a band lead',
+    photo: 'pavel',
   },
   {
     name: 'Roman',
     surname: 'Zajíček',
     title: 'Dobro | vocals',
     description: 'Roman plays the dobro',
+    photo: 'roman',
   },
   {
     name: 'Jiří',
     surname: 'Šubr',
     title: 'Double bass | vocals',
     description: 'Jirka is a bassman!',
+    photo: 'jirka',
   },
   {
     name: 'Eda',
     surname: 'Krištůfek',
-    title: 'Mandolin | vocals',
+    title: 'Mandolin',
     description: 'Eda plays his mandolin very well',
+    photo: 'eda',
   },
   {
     name: 'Alexey',
     surname: 'Chudinov',
     title: 'Banjo | vocals',
     description: 'Alexey plays a banjo and tries to sing',
+    photo: 'alexej',
   },
 ];
 
@@ -58,7 +63,7 @@ export default class Slider extends Component {
 
     return (
       <div key={member.name} className={classes.slide}>
-        <div className={classes.picture}>
+        <div className={classes.picture} style={{ backgroundImage: `url(/images/${member.photo}.png)` }}>
           <h2 className={classes.name}>{member.name}</h2>
           <h2 className={classes.surname}>{member.surname}</h2>
         </div>

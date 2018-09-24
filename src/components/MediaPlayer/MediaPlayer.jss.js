@@ -9,6 +9,10 @@ export default ({ colors, mediaQueries, sizes }) => ({
     [mediaQueries.tablet]: {
       marginTop: '50px',
     },
+
+    [mediaQueries.small]: {
+      height: '120px',
+    },
   },
 
   title: {
@@ -27,6 +31,10 @@ export default ({ colors, mediaQueries, sizes }) => ({
 
   progress: {
     width: '100%',
+
+    [mediaQueries.small]: {
+      marginBottom: '20px',
+    },
   },
 
   buttons: {
