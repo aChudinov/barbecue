@@ -27,8 +27,20 @@ export default ({ colors, mediaQueries }) => ({
     backgroundImage: 'url(/images/logo.png)',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left center',
+    backgroundPosition: 'center center',
     transition: '.3s all ease-in-out',
+
+    [mediaQueries.tablet]: {
+      height: '60px',
+    },
+
+    [mediaQueries.phone]: {
+      height: '50px',
+    },
+
+    [mediaQueries.small]: {
+      height: '40px',
+    },
   },
 
   link: {

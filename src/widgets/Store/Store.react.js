@@ -9,12 +9,12 @@ const ITEMS = [
     title: 'T-shirt',
     description: 'T-shirt description',
     price: '200 Kč',
-    image: '/images/tshirt.jpg',
+    image: '/images/tshirt.png',
   },
   {
-    title: 'New CD',
-    description: 'New CD description',
-    price: '500 Kč',
+    title: 'Barbecue — Medium Rare',
+    description: 'New CD',
+    price: '200 Kč',
     image: '/images/album.png',
   },
 ];
@@ -25,7 +25,12 @@ export default class About extends React.Component {
     const { classes } = this.props;
 
     return (
-      <li>
+      <li className={classes.item}>
+        <div className={classes.image} style={{ backgroundImage: `url(${image})` }} />
+        <div className={classes.title}>{title}</div>
+        <div className={classes.description}>{description}</div>
+        <div className={classes.price}>{price}</div>
+        <div className={classes.button}>BUY NOW</div>
       </li>
     );
   }
@@ -38,7 +43,7 @@ export default class About extends React.Component {
         <Container>
           <h1 className={classes.heading}>Store</h1>
 
-          <ul>
+          <ul className={classes.list}>
             {ITEMS.map(this.renderItem)}
           </ul>
         </Container>
