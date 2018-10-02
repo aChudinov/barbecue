@@ -11,7 +11,7 @@ import NextIcon from '../../images/player_next.svg';
 import PrevIcon from '../../images/player_previous.svg';
 
 const SONGS = [
-  { title: 'Can\'t you hear me calling', author: 'Bill Monroe', url: './mp3/cantyouhear.mp3' },
+  { title: 'Koňský jódl', author: 'Pavel Handlík', url: './mp3/jodl.mp3' },
   { title: 'Kavárna pod věží', author: 'Pavel Handlík', url: './mp3/kavarna.mp3' },
 ];
 

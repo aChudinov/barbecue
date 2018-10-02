@@ -7,17 +7,19 @@ import { Element } from 'react-scroll';
 const ITEMS = [
   {
     title: 'T-shirt',
-    description: 'T-shirt description',
-    price: '200 Kč',
+    description: 'Available only with blue print',
+    price: '300 Kč',
     image: '/images/tshirt.png',
   },
   {
     title: 'Barbecue — Medium Rare',
-    description: 'New CD',
+    description: 'Our latest CD',
     price: '200 Kč',
     image: '/images/album.png',
   },
 ];
+
+const MAIL_SUBJECT = item => `BarbecueBand.cz - objednávka ${item}`;
 
 @injectSheet(styles)
 export default class About extends React.Component {
@@ -30,7 +32,7 @@ export default class About extends React.Component {
         <div className={classes.title}>{title}</div>
         <div className={classes.description}>{description}</div>
         <div className={classes.price}>{price}</div>
-        <div className={classes.button}>BUY NOW</div>
+        <a href={`mailto:info@barbecueband.cz?subject=${MAIL_SUBJECT(title)}`} className={classes.button}>BUY NOW</a>
       </li>
     );
   }
