@@ -4,7 +4,6 @@ import React from 'react';
 import styles from './About.jss';
 import { Element } from 'react-scroll';
 
-
 @injectSheet(styles)
 export default class About extends React.Component {
   render() {

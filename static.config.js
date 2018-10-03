@@ -24,7 +24,9 @@ export default {
         <style
           type="text/css"
           id="server-side-styles"
-          dangerouslySetInnerHTML={{ __html: renderMeta.styleSheets.toString() }}
+          dangerouslySetInnerHTML={{
+            __html: renderMeta.styleSheets && renderMeta.styleSheets.toString(),
+          }}
         />
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
       </Head>
