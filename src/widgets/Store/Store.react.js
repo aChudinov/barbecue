@@ -22,12 +22,12 @@ const ITEMS = [
 const MAIL_SUBJECT = item => `BarbecueBand.cz - objednávka ${item}`;
 
 @injectSheet(styles)
-export default class About extends React.Component {
+export default class Store extends React.Component {
   renderItem = ({ title, description, price, image }) => {
     const { classes } = this.props;
 
     return (
-      <li className={classes.item}>
+      <li className={classes.item} key={title}>
         <div className={classes.image} style={{ backgroundImage: `url(${image})` }} />
         <div className={classes.title}>{title}</div>
         <div className={classes.description}>{description}</div>

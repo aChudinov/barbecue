@@ -1,6 +1,37 @@
 import fetchData from './src/prismic/fetch';
+import React from 'React';
+import { JssProvider, SheetsRegistry } from 'react-jss';
 
 export default {
+  renderToHtml: (render, Comp, meta) => {
+    const sheets = new SheetsRegistry();
+    const html = render(
+      <JssProvider registry={sheets}>
+        <Comp />
+      </JssProvider>
+    );
+
+    meta.styleSheets = sheets;
+
+    return html;
+  },
+
+  Document: ({ Html, Head, Body, children, renderMeta }) => (
+    <Html>
+      <Head>
+        <meta charSet="utf8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+        <style
+          type="text/css"
+          id="server-side-styles"
+          dangerouslySetInnerHTML={{ __html: renderMeta.styleSheets.toString() }}
+        />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
+
   getRoutes: async() => {
     const concerts = await fetchData();
 

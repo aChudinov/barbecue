@@ -5,7 +5,7 @@ import styles from './Members.jss';
 import { Element } from 'react-scroll';
 
 @injectSheet(styles)
-export default class About extends Component {
+export default class Members extends Component {
   render() {
     const { classes } = this.props;
 
