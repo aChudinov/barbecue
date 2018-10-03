@@ -7,6 +7,7 @@ export default ({ colors, mediaQueries }) => ({
   heading: {
     textTransform: 'uppercase',
     textAlign: 'center',
+    marginBottom: '50px',
   },
 
   list: {
