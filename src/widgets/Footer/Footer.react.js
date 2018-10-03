@@ -4,6 +4,7 @@ import injectSheet from 'react-jss';
 import Menu from '../../components/Menu';
 import React from 'react';
 import styles from './Footer.jss';
+import translate from '../../lib/translate';
 import { Element } from 'react-scroll';
 
 import EmailIcon from '../../images/email.svg';
@@ -16,16 +17,17 @@ const SOCIALS = [
   { id: 'email', Icon: EmailIcon, url: 'mailto:info@barbecueband.cz' },
 ];
 
+@translate
 @injectSheet(styles)
 export default class Footer extends React.PureComponent {
   render() {
-    const { classes } = this.props;
+    const { classes, msg } = this.props;
 
     return (
       <Element name="contacts">
         <footer className={classes.footer}>
           <Container>
-            <h1 className={classes.heading}>Contacts</h1>
+            <h1 className={classes.heading}>{msg('menu.contacts')}</h1>
             <div className={classes.phone}>+420 776-230-804</div>
 
             <DottedLine className={classes.dots} />

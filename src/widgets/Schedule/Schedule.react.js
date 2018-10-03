@@ -4,14 +4,16 @@ import injectSheets from 'react-jss';
 import moment from 'moment';
 import React from 'react';
 import styles from './Schedule.jss';
+import translate from '../../lib/translate';
 import { Element } from 'react-scroll';
 import { withRouteData } from 'react-static';
 
+@translate
 @withRouteData
 @injectSheets(styles)
 export default class Schedule extends React.PureComponent {
   renderRow = (item, index) => {
-    const { concerts, classes } = this.props;
+    const { concerts, classes, msg } = this.props;
     const { id, link, place, title } = item;
 
     const date = moment(item.date);
@@ -32,7 +34,7 @@ export default class Schedule extends React.PureComponent {
           </div>
           <div className={classes.time}>{time}</div>
           <div className={classes.description}>{title} {'//'} {place}</div>
-          <a href={link} target="_blank" className={classes.link}>Info</a>
+          <a href={link} target="_blank" className={classes.link}>{msg('schedule.info')}</a>
         </li>
 
         <div className={classes.description_mobile}>{title} {'//'} {place}</div>
@@ -45,7 +47,7 @@ export default class Schedule extends React.PureComponent {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, msg } = this.props;
     const concerts = this.props.concerts
       .sort((a, b) => moment(a.date).isAfter(moment(b.date)))
       .filter(item => moment(item.date).isAfter(moment()));
@@ -53,7 +55,7 @@ export default class Schedule extends React.PureComponent {
     return (
       <Element name="schedule" className={classes.container}>
         <Container>
-          <h1 className={classes.heading}>Schedule</h1>
+          <h1 className={classes.heading}>{msg('menu.schedule')}</h1>
 
           <ul className={classes.list}>
             {concerts.map(this.renderRow)}

@@ -3,29 +3,35 @@ import Container from '../Container';
 import injectSheet from 'react-jss';
 import React, { Component } from 'react';
 import styles from './Menu.jss';
+import translate from '../../lib/translate';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { Sticky } from 'react-sticky';
 
-const MENU_ITEMS = [
-  { id: 'home', title: 'Home' },
-  { id: 'members', title: 'Members' },
-  { id: 'about', title: 'About' },
-  { id: 'schedule', title: 'Schedule' },
-  { id: 'media', title: 'Media' },
-  { id: 'store', title: 'Store' },
-  // { id: 'gallery', title: 'Gallery' },
-  { id: 'contacts', title: 'Contacts' },
-];
+import CZIcon from '../../images/CZ.svg';
+import ENIcon from '../../images/EN.svg';
 
+const MENU_ITEMS = ['home', 'members', 'about', 'schedule', 'media', 'store', /* 'gallery', */ 'contacts'];
+
+const LANGUAGE_ICONS = { cz: CZIcon, en: ENIcon };
+const LANGUAGE_PATHS = { cz: '/', en: '/en' };
+
+@translate
 @injectSheet(styles)
 export default class Menu extends Component {
+  get inactiveLanguage() {
+    const { language } = this.props;
+
+    return language === 'en' ? 'cz' : 'en';
+  }
+
   renderMenuItems() {
-    const { classes, inverseColors } = this.props;
+    const { classes, inverseColors, msg } = this.props;
 
     return (
-      MENU_ITEMS.map(({ id, title }, index) => (
+      MENU_ITEMS.map((id, index) => (
         <React.Fragment key={id}>
-          <Link className={classes.link} to={id} smooth offset={-54}>{title}</Link>
+          <Link className={classes.link} to={id} smooth offset={-54}>{msg(`menu.${id}`)}</Link>
 
           {!inverseColors && index < MENU_ITEMS.length - 1 &&
             <span className={classes.dot}>●</span>
@@ -45,11 +51,16 @@ export default class Menu extends Component {
       classNameProp,
     );
 
+    const LanguageIcon = LANGUAGE_ICONS[this.inactiveLanguage];
+
     if (sticky) {
       return (
         <nav style={style} className={className}>
           <Container className={classes.container}>
             <div className={classes.items}>{this.renderMenuItems()}</div>
+            <RouterLink className={classes.language} to={LANGUAGE_PATHS[this.inactiveLanguage]}>
+              <LanguageIcon className={classes.languageIcon} />
+            </RouterLink>
             <div className={classes.logo} />
           </Container>
         </nav>

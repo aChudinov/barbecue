@@ -1,49 +1,42 @@
-import injectSheet from 'react-jss';
 import Container from '../../components/Container';
+import injectSheet from 'react-jss';
 import React from 'react';
 import styles from './Store.jss';
+import translate from '../../lib/translate';
 import { Element } from 'react-scroll';
 
 const ITEMS = [
-  {
-    title: 'T-shirt',
-    description: 'Available only with blue print',
-    price: '300 Kč',
-    image: '/images/tshirt.png',
-  },
-  {
-    title: 'Barbecue — Medium Rare',
-    description: 'Our latest CD',
-    price: '200 Kč',
-    image: '/images/album.png',
-  },
+  { key: 'tshirt', price: '300 Kč' },
+  { key: 'album', price: '200 Kč' },
 ];
 
 const MAIL_SUBJECT = item => `BarbecueBand.cz - objednávka ${item}`;
 
+@translate
 @injectSheet(styles)
 export default class Store extends React.Component {
-  renderItem = ({ title, description, price, image }) => {
-    const { classes } = this.props;
+  renderItem = ({ key, price }) => {
+    const { classes, msg } = this.props;
+    const title = msg(`store.items.${key}.title`);
 
     return (
-      <li className={classes.item} key={title}>
-        <div className={classes.image} style={{ backgroundImage: `url(${image})` }} />
+      <li className={classes.item} key={key}>
+        <div className={classes.image} style={{ backgroundImage: `url(/images/${key}.png)` }} />
         <div className={classes.title}>{title}</div>
-        <div className={classes.description}>{description}</div>
+        <div className={classes.description}>{msg(`store.items.${key}.description`)}</div>
         <div className={classes.price}>{price}</div>
-        <a href={`mailto:info@barbecueband.cz?subject=${MAIL_SUBJECT(title)}`} className={classes.button}>BUY NOW</a>
+        <a href={`mailto:info@barbecueband.cz?subject=${MAIL_SUBJECT(title)}`} className={classes.button}>{msg('store.buy')}</a>
       </li>
     );
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, msg } = this.props;
 
     return (
       <Element name="store" className={classes.container}>
         <Container>
-          <h1 className={classes.heading}>Store</h1>
+          <h1 className={classes.heading}>{msg('menu.store')}</h1>
 
           <ul className={classes.list}>
             {ITEMS.map(this.renderItem)}

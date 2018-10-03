@@ -2,48 +2,40 @@ import injectSheet from 'react-jss';
 import React, { Component } from 'react';
 import ReactSlick from 'react-slick';
 import styles from './Slider.jss';
+import translate from '../../lib/translate';
 
 import LeftArrowIcon from '../../images/left-arrow.svg';
 import RightArrowIcon from '../../images/right-arrow.svg';
 
 const MEMBERS = [
   {
+    key: 'pavel',
     name: 'Pavel',
     surname: 'Handlík',
-    title: 'Guitar | vocals',
-    description: '',
-    photo: 'pavel',
   },
   {
+    key: 'roman',
     name: 'Roman',
     surname: 'Zajíček',
-    title: 'Dobro | vocals',
-    description: '',
-    photo: 'roman',
   },
   {
+    key: 'jirka',
     name: 'Jiří',
     surname: 'Šubr',
-    title: 'Double bass | vocals',
-    description: '',
-    photo: 'jirka',
   },
   {
+    key: 'eda',
     name: 'Eda',
     surname: 'Krištůfek',
-    title: 'Mandolin',
-    description: '',
-    photo: 'eda',
   },
   {
+    key: 'alexej',
     name: 'Alexey',
     surname: 'Chudinov',
-    title: 'Banjo | vocals',
-    description: '',
-    photo: 'alexej',
   },
 ];
 
+@translate
 @injectSheet(styles)
 export default class Slider extends Component {
   renderDot = index => {
@@ -59,18 +51,18 @@ export default class Slider extends Component {
   }
 
   renderSlide = member => {
-    const { classes } = this.props;
+    const { classes, msg } = this.props;
 
     return (
-      <div key={member.name} className={classes.slide}>
-        <div className={classes.picture} style={{ backgroundImage: `url(/images/${member.photo}.png)` }}>
+      <div key={member.key} className={classes.slide}>
+        <div className={classes.picture} style={{ backgroundImage: `url(/images/${member.key}.png)` }}>
           <h2 className={classes.name}>{member.name}</h2>
           <h2 className={classes.surname}>{member.surname}</h2>
         </div>
 
         <div className={classes.text}>
-          <h3 className={classes.title}>{member.title}</h3>
-          <div className={classes.description}>{member.description}</div>
+          <h3 className={classes.title}>{msg(`members.${member.key}.title`)}</h3>
+          <div className={classes.description}>{msg(`members.${member.key}.description`)}</div>
         </div>
       </div>
     );

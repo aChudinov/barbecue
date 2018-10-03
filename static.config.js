@@ -41,7 +41,12 @@ export default {
       {
         path: '/',
         component: 'src/containers/Home/index',
-        getData: () => ({ concerts }),
+        getData: () => ({ concerts, language: 'cz' }),
+      },
+      {
+        path: '/en',
+        component: 'src/containers/Home/index',
+        getData: () => ({ concerts, language: 'en' }),
       },
       {
         is404: true,

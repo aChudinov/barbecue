@@ -3,17 +3,19 @@ import injectSheet from 'react-jss';
 import MediaPlayer from '../../components/MediaPlayer';
 import React from 'react';
 import styles from './Media.jss';
+import translate from '../../lib/translate';
 import { Element } from 'react-scroll';
 
+@translate
 @injectSheet(styles)
 export default class Media extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, msg } = this.props;
 
     return (
       <Element name="media" className={classes.container}>
         <Container>
-          <h1 className={classes.heading}>Media</h1>
+          <h1 className={classes.heading}>{msg('menu.media')}</h1>
 
           <div className={classes.flex}>
             <iframe

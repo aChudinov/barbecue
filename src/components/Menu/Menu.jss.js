@@ -11,6 +11,7 @@ export default ({ colors, mediaQueries }) => ({
 
     [mediaQueries.tablet]: {
       justifyContent: 'center',
+      flexDirection: 'row-reverse',
       padding: '5px 0',
     },
   },
@@ -41,6 +42,23 @@ export default ({ colors, mediaQueries }) => ({
     [mediaQueries.small]: {
       height: '40px',
     },
+  },
+
+  language: {
+    marginLeft: 'auto',
+    marginRight: '50px',
+
+    [mediaQueries.tablet]: {
+      transition: '.3s all ease-in-out',
+      position: 'absolute',
+      top: '10px',
+      right: '-40px',
+    },
+  },
+
+  languageIcon: {
+    width: '40px',
+    height: '30px',
   },
 
   link: {
@@ -95,6 +113,10 @@ export default ({ colors, mediaQueries }) => ({
       backgroundImage: 'url(/images/logo_inversed.png)',
       width: '72px',
       height: '46px',
+    },
+
+    '& $language': {
+      top: '13px',
     },
   },
 
