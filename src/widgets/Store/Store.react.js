@@ -7,6 +7,7 @@ import { Element } from 'react-scroll';
 
 const ITEMS = [
   { key: 'tshirt', price: '300 Kč' },
+  { key: 'cap', price: '200 Kč' },
   { key: 'album', price: '200 Kč' },
 ];
 

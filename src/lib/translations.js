@@ -59,6 +59,10 @@ Jak sami interpreti říkají: "Na podiu se bavíme a to baví i naše diváky."
         title: { en: 'T-shirt', cz: 'Tričko' },
         description: { en: 'Available only with blue print', cz: 'Dostupné pouze s modrým potiskem' },
       },
+      cap: {
+        title: { en: 'Cap', cz: 'Čepice' },
+        description: { en: 'Available in many colors', cz: 'Dostupné v mnoha barvách' },
+      },
       album: {
         title: { en: 'Barbecue — Medium Rare', cz: 'Barbecue — Medium Rare' },
         description: { en: 'Our latest CD', cz: 'Actuální CD' },
