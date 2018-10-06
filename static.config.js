@@ -29,6 +29,18 @@ export default {
           }}
         />
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127110671-1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag("js", new Date());
+              gtag("config", "UA-127110671-1");
+            `,
+          }}
+        />
       </Head>
       <Body>{children}</Body>
     </Html>
