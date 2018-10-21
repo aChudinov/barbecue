@@ -20,7 +20,6 @@ export default ({ colors }) => ({
 
     a: {
       textDecoration: 'none',
-      color: '#108db8',
       fontWeight: 'bold',
     },
 

@@ -1,4 +1,9 @@
 export default {
+  toTop: {
+    en: 'To top',
+    cz: 'Nahoru',
+  },
+
   about: {
     en: `
 Barbecue, the bluegrass band, was founded in 2002 in the heart of Europe in the Czech Republic.
