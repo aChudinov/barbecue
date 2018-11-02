@@ -1,10 +1,10 @@
 export default ({ colors, mediaQueries }) => ({
   '@global': {
-    '.slick-slider': {
+    '.members-slider .slick-slider': {
       position: 'relative',
     },
 
-    '.slick-list': {
+    '.members-slider .slick-list': {
       width: '100%',
       height: '500px',
 
@@ -13,7 +13,7 @@ export default ({ colors, mediaQueries }) => ({
       },
     },
 
-    '.slick-track': {
+    '.members-slider .slick-track': {
       position: 'relative',
       left: 0,
       top: 0,
@@ -24,13 +24,13 @@ export default ({ colors, mediaQueries }) => ({
       },
     },
 
-    '.slick-slide': {
+    '.members-slider .slick-slide': {
       float: 'left',
       height: '100%',
       minHeight: '1px',
     },
 
-    '.slick-arrow': {
+    '.members-slider .slick-arrow': {
       position: 'absolute',
       cursor: 'pointer',
       zIndex: 100,
@@ -38,15 +38,15 @@ export default ({ colors, mediaQueries }) => ({
       transform: 'translateY(-50%)',
     },
 
-    '.slick-prev': {
+    '.members-slider .slick-prev': {
       left: '-60px',
     },
 
-    '.slick-next': {
+    '.members-slider .slick-next': {
       right: '-60px',
     },
 
-    '.slick-dots': {
+    '.members-slider .slick-dots': {
       position: 'absolute',
       top: '100px',
       right: '114px',
@@ -60,7 +60,7 @@ export default ({ colors, mediaQueries }) => ({
       },
     },
 
-    '.slick-dots li': {
+    '.members-slider .slick-dots li': {
       color: colors.primaryLight,
       textTransform: 'uppercase',
       cursor: 'pointer',
@@ -70,17 +70,17 @@ export default ({ colors, mediaQueries }) => ({
       userSelect: 'none',
     },
 
-    '.slick-dots li.slick-active': {
+    '.members-slider .slick-dots li.slick-active': {
       color: colors.primary,
     },
 
-    '.slick-dots li span': {
+    '.members-slider .slick-dots li span': {
       fontSize: '20px',
       position: 'relative',
       left: '-3px',
     },
 
-    '.slick-dots li div div': {
+    '.members-slider .slick-dots li div div': {
       transform: 'rotate(-90deg)',
       transformOrigin: 'top left',
       position: 'absolute',
@@ -88,23 +88,23 @@ export default ({ colors, mediaQueries }) => ({
       fontWeight: 500,
     },
 
-    '.slick-dots .surname': {
+    '.members-slider .slick-dots .surname': {
       bottom: '10px',
     },
 
-    '.slick-dots .name0': {
+    '.members-slider .slick-dots .name0': {
       bottom: '-48px',
     },
-    '.slick-dots .name1': {
+    '.members-slider .slick-dots .name1': {
       bottom: '-54px',
     },
-    '.slick-dots .name2': {
+    '.members-slider .slick-dots .name2': {
       bottom: '-36px',
     },
-    '.slick-dots .name3': {
+    '.members-slider .slick-dots .name3': {
       bottom: '-37px',
     },
-    '.slick-dots .name4': {
+    '.members-slider .slick-dots .name4': {
       bottom: '-56px',
     },
   },

@@ -4,6 +4,7 @@ import injectSheets from 'react-jss';
 import moment from 'moment';
 import React from 'react';
 import styles from './Schedule.jss';
+import Timeline from '../../components/Timeline';
 import translate from '../../lib/translate';
 import { Element } from 'react-scroll';
 import { withRouteData } from 'react-static';
@@ -12,8 +13,8 @@ import { withRouteData } from 'react-static';
 @withRouteData
 @injectSheets(styles)
 export default class Schedule extends React.PureComponent {
-  renderRow = (item, index) => {
-    const { concerts, classes, msg } = this.props;
+  renderRow = (item, index, list) => {
+    const { classes, msg } = this.props;
     const { id, link, place, title } = item;
 
     const date = moment(item.date);
@@ -39,7 +40,7 @@ export default class Schedule extends React.PureComponent {
 
         <div className={classes.description_mobile}>{title} {'//'} {place}</div>
 
-        {index < concerts.length - 1 &&
+        {index < list.length - 1 &&
           <DottedLine className={classes.dots} size={7000} />
         }
       </React.Fragment>
@@ -48,17 +49,20 @@ export default class Schedule extends React.PureComponent {
 
   render() {
     const { classes, msg } = this.props;
-    const concerts = this.props.concerts
-      .sort((a, b) => moment(a.date).isAfter(moment(b.date)))
-      .filter(item => moment(item.date).isAfter(moment()));
+    const concerts = this.props.concerts.sort((a, b) =>
+      moment(a.date).isAfter(moment(b.date)) ? 1 : -1
+    );
+    const upcoming = concerts.filter(item => moment(item.date).isAfter(moment()));
 
     return (
       <Element name="schedule" className={classes.container}>
         <Container>
           <h1 className={classes.heading}>{msg('menu.schedule')}</h1>
 
+          <Timeline concerts={concerts} />
+
           <ul className={classes.list}>
-            {concerts.map(this.renderRow)}
+            {upcoming.map(this.renderRow)}
           </ul>
         </Container>
       </Element>

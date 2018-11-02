@@ -73,6 +73,7 @@ export default class Slider extends Component {
 
     return (
       <ReactSlick
+        className="members-slider"
         dots
         fade
         infinite

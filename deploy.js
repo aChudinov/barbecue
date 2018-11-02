@@ -8,6 +8,7 @@ const config = {
   user: 'w196988',
   localRoot: `${__dirname}/dist`,
   remoteRoot: '/www/subdom/new/',
+  // remoteRoot: '/www/',
   include: ['*', '**/*'],
   exclude: [],
 };

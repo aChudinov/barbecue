@@ -12,7 +12,7 @@ export default ({ colors, mediaQueries }) => ({
 
   list: {
     padding: 0,
-    margin: '0 auto',
+    margin: '30px auto 0',
     maxWidth: '700px',
   },
 
@@ -63,6 +63,7 @@ export default ({ colors, mediaQueries }) => ({
     borderRight: `4px solid ${colors.primaryLight}`,
     paddingRight: '15px',
     marginRight: '15px',
+    minWidth: '82px',
 
     [mediaQueries.phone]: {
       textAlign: 'center',
