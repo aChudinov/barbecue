@@ -27,7 +27,7 @@ export default class Timeline extends React.PureComponent {
           <br />
           {title}
           <br />
-          <span>{place}</span>
+          {place}
         </div>
       </div>
     );

@@ -21,6 +21,7 @@ export default ({ colors }) => ({
     a: {
       textDecoration: 'none',
       fontWeight: 'bold',
+      color: colors.white,
     },
 
     img: {

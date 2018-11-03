@@ -137,7 +137,6 @@ export default ({ colors, mediaQueries }) => ({
     fontSize: '30px',
     textAlign: 'right',
     paddingRight: '25px',
-    backgroundColor: 'rgba(0, 0, 0, .2)',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center 100%',

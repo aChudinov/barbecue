@@ -1,4 +1,4 @@
-export default ({ colors, sizes, mediaQueries }) => ({
+export default ({ colors }) => ({
   container: {
     position: 'relative',
     maxWidth: '600px',
@@ -16,12 +16,12 @@ export default ({ colors, sizes, mediaQueries }) => ({
 
     '&:before': {
       left: 0,
-      background: `linear-gradient(to left, rgba(255, 255, 255, 0), ${colors.white})`,
+      background: `linear-gradient(to left, rgba(228, 221, 219, 0), ${colors.white})`,
     },
 
     '&:after': {
       right: 0,
-      background: `linear-gradient(to right, rgba(255, 255, 255, 0), ${colors.white})`,
+      background: `linear-gradient(to right, rgba(228, 221, 219, 0), ${colors.white})`,
     },
   },
 
