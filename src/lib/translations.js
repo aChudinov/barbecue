@@ -21,7 +21,7 @@ Jak sami interpreti říkají: "Na podiu se bavíme a to baví i naše diváky."
 
   menu: {
     home: { en: 'Home', cz: 'Home' },
-    members: { en: 'Members', cz: 'Členové' },
+    news: { en: 'News', cz: 'Zprávy' },
     about: { en: 'About', cz: 'O kapele' },
     schedule: { en: 'Schedule', cz: 'Kalendář' },
     media: { en: 'Media', cz: 'Media' },
@@ -50,6 +50,28 @@ Jak sami interpreti říkají: "Na podiu se bavíme a to baví i naše diváky."
     alexej: {
       title: { en: 'Banjo | vocals', cz: 'Banjo | Zpěv' },
       description: { en: '', cz: '' },
+    },
+  },
+
+  news: {
+    first: {
+      title: { en: 'New CD release', cz: 'New CD release' },
+      text_1: { en: 'We are happy to announce official release of our new CD called "Medium Rare"!', cz: 'New CD release' },
+      text_2: { en: 'Traditional and modern bluegrass in Czech and English, as well as our original songs. Together with great cover art and a small surprise inside, it will make you come back to this album again and again.', cz: 'New CD release' },
+      text_3: { en: 'Available in our store:', cz: 'New CD release' },
+    },
+
+    second: {
+      title: { en: 'Join us on Facebook', cz: 'Join us on Facebook' },
+      text_1: { en: 'Join our public page on Facebook to be aware of latest news and publications.', cz: 'Join us on Facebook' },
+      text_2: { en: 'And don\'t forget to share our web with your friends!', cz: 'Join us on Facebook' },
+    },
+
+    third: {
+      title: { en: 'USA tour 2018', cz: 'USA tour 2018' },
+      text_1: { en: 'We\'ve just returned back from our first USA tour sponsored by ', cz: 'New CD release' },
+      text_2: { en: ' and want to share with you some highlights of our experience:', cz: 'New CD release' },
+      link: { en: 'The Bluegrass Standard', cz: 'The Bluegrass Standard' },
     },
   },
 

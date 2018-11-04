@@ -22,6 +22,11 @@ export default ({ colors }) => ({
       textDecoration: 'none',
       fontWeight: 'bold',
       color: colors.white,
+      transition: 'color .3s ease-in-out',
+
+      '&:hover': {
+        color: 'white',
+      },
     },
 
     img: {

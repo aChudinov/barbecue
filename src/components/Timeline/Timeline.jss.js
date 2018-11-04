@@ -29,7 +29,7 @@ export default ({ colors }) => ({
     transform: 'translateZ(0)',
     height: '180px',
     width: '100%',
-    cursor: 'move',
+    cursor: 'ew-resize',
     paddingTop: '5px',
     paddingBottom: '5px',
     overflowY: 'hidden',

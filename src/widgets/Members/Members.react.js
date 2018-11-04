@@ -10,7 +10,7 @@ export default class Members extends Component {
     const { classes } = this.props;
 
     return (
-      <Element name="members" className={classes.container}>
+      <Element name="about" className={classes.container}>
         <div className={classes.slider}>
           <Slider />
         </div>

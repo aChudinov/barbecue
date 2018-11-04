@@ -11,7 +11,7 @@ import { Sticky } from 'react-sticky';
 import CZIcon from '../../images/CZ.svg';
 import ENIcon from '../../images/EN.svg';
 
-const MENU_ITEMS = ['home', 'members', 'about', 'schedule', 'media', 'store', /* 'gallery', */ 'contacts'];
+const MENU_ITEMS = ['home', 'news', 'about', 'schedule', 'media', 'store', /* 'gallery', */ 'contacts'];
 
 const LANGUAGE_ICONS = { cz: CZIcon, en: ENIcon };
 const LANGUAGE_PATHS = { cz: '/', en: '/en' };

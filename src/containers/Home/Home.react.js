@@ -1,10 +1,10 @@
 // import Gallery from '../../components/Gallery';
-// import News from '../../widgets/News';
 import About from '../../widgets/About';
 import Footer from '../../widgets/Footer';
 import injectSheet from 'react-jss';
 import Media from '../../widgets/Media';
 import Members from '../../widgets/Members';
+import News from '../../widgets/News';
 import Proposition from '../../widgets/Proposition';
 import React, { Component } from 'react';
 import Schedule from '../../widgets/Schedule';
@@ -21,7 +21,7 @@ export default class Home extends Component {
     return (
       <StickyContainer style={{ overflow: 'hidden', height: '100%' }}>
         <Proposition />
-        {/* <News /> */}
+        <News />
         <Members />
         <About />
         <Schedule />

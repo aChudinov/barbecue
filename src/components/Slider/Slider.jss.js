@@ -56,7 +56,7 @@ export default ({ colors, mediaQueries }) => ({
       margin: 0,
 
       '@media screen and (max-width: 550px)': {
-        right: '0',
+        right: '10px',
       },
     },
 
