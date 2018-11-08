@@ -97,6 +97,7 @@ export default ({ colors, mediaQueries }) => ({
     transition: '.3s background-color ease-in-out',
 
     '&:hover': {
+      color: colors.white,
       backgroundColor: colors.black,
     },
 

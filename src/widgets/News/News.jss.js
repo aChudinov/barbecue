@@ -31,6 +31,12 @@ export default ({ colors, mediaQueries }) => ({
     [mediaQueries.large]: {
       textAlign: 'center',
     },
+
+    [mediaQueries.small]: {
+      '& > iframe': {
+        margin: '0 -30px',
+      },
+    },
   },
 
   third: {
@@ -79,6 +85,7 @@ export default ({ colors, mediaQueries }) => ({
     cursor: 'pointer',
 
     '&:hover': {
+      color: colors.white,
       backgroundColor: colors.black,
     },
   },

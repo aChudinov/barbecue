@@ -33,7 +33,7 @@ export default ({ colors, mediaQueries }) => ({
     height: '250px',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    marginBottom: '20px',
+    margin: '0 auto 20px',
   },
 
   title: {
@@ -64,6 +64,7 @@ export default ({ colors, mediaQueries }) => ({
     cursor: 'pointer',
 
     '&:hover': {
+      color: colors.white,
       backgroundColor: colors.black,
     },
   },

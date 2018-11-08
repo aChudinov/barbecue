@@ -21,7 +21,7 @@ Jak sami interpreti říkají: "Na podiu se bavíme a to baví i naše diváky."
 
   menu: {
     home: { en: 'Home', cz: 'Home' },
-    news: { en: 'News', cz: 'Zprávy' },
+    news: { en: 'News', cz: 'Novinky' },
     about: { en: 'About', cz: 'O kapele' },
     schedule: { en: 'Schedule', cz: 'Kalendář' },
     media: { en: 'Media', cz: 'Media' },
@@ -55,22 +55,22 @@ Jak sami interpreti říkají: "Na podiu se bavíme a to baví i naše diváky."
 
   news: {
     first: {
-      title: { en: 'New CD release', cz: 'New CD release' },
-      text_1: { en: 'We are happy to announce official release of our new CD called "Medium Rare"!', cz: 'New CD release' },
-      text_2: { en: 'Traditional and modern bluegrass in Czech and English, as well as our original songs. Together with great cover art and a small surprise inside, it will make you come back to this album again and again.', cz: 'New CD release' },
-      text_3: { en: 'Available in our store:', cz: 'New CD release' },
+      title: { en: 'New CD release', cz: 'Nové CD je na světě' },
+      text_1: { en: 'We are happy to announce official release of our new CD called "Medium Rare"!', cz: 'S radostí oznamujeme vydání našeho nového CD s názvem "Medium Rare"!' },
+      text_2: { en: 'Traditional and modern bluegrass in Czech and English, as well as our original songs. Together with great cover art and a small surprise inside, it will make you come back to this album again and again.', cz: 'Tradiční a moderní bluegrass v češtině a angličtině, kde samozřejmě nechybí naše autorské písně. Skvěle graficky provedený obal a malé překvapení uvnitř jsou další věci, kvůli kterým se budete k albu rádi vracet.' },
+      text_3: { en: 'Available in our store:', cz: 'K dispozici v našem obchodě:' },
     },
 
     second: {
-      title: { en: 'Join us on Facebook', cz: 'Join us on Facebook' },
-      text_1: { en: 'Join our public page on Facebook to be aware of latest news and publications.', cz: 'Join us on Facebook' },
-      text_2: { en: 'And don\'t forget to share our web with your friends!', cz: 'Join us on Facebook' },
+      title: { en: 'Join us on Facebook', cz: 'Navštivte nás na facebooku' },
+      text_1: { en: 'Join our public page on Facebook to be aware of latest news and publications.', cz: 'Navštivte nás na Facebooku a mějte nejnovější zprávy a novinky  z první ruky.' },
+      text_2: { en: 'And don\'t forget to share our web with your friends!', cz: 'Pokud se Vám náš web líbí, nezapomeňte jej sdílet svým přátelům!' },
     },
 
     third: {
       title: { en: 'USA tour 2018', cz: 'USA tour 2018' },
-      text_1: { en: 'We\'ve just returned back from our first USA tour sponsored by ', cz: 'New CD release' },
-      text_2: { en: ' and want to share with you some highlights of our experience:', cz: 'New CD release' },
+      text_1: { en: 'We\'ve just returned back from our first USA tour sponsored by ', cz: 'Právě jsme se vrátili z našeho prvního amerického turné sponzorovaného ' },
+      text_2: { en: ' and want to share with you some highlights of our experience:', cz: ' a chtěli bychom se s Vámi podělit o naše zážitky:' },
       link: { en: 'The Bluegrass Standard', cz: 'The Bluegrass Standard' },
     },
   },

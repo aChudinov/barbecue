@@ -13,7 +13,7 @@ import InstagramIcon from '../../images/instagram.svg';
 
 const SOCIALS = [
   { id: 'facebook', Icon: FacebookIcon, url: 'https://www.facebook.com/barbecue.bluegrass' },
-  { id: 'instagram', Icon: InstagramIcon, url: 'https://www.instagram.com/barbecue_band' },
+  { id: 'instagram', Icon: InstagramIcon, url: 'https://www.instagram.com/barbecue.bluegrass' },
   { id: 'email', Icon: EmailIcon, url: 'mailto:info@barbecueband.cz' },
 ];
 

@@ -77,7 +77,7 @@ export default ({ colors, mediaQueries }) => ({
     '.members-slider .slick-dots li span': {
       fontSize: '20px',
       position: 'relative',
-      left: '-3px',
+      left: '-2px',
     },
 
     '.members-slider .slick-dots li div div': {
