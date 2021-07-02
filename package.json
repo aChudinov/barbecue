@@ -1,5 +1,5 @@
 {
-  "name": "Barbecue",
+  "name": "barbecue",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
+    "release": "release-it --ci",
     "deploy": "yarn build && node deploy"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "babel-plugin-inline-react-svg": "^0.5.2",
     "eslint": "^4.17.0",
     "ftp-deploy": "^2.1.2",
+    "release-it": "^14.10.0",
     "serve": "^6.1.0"
   }
 }
